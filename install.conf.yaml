@@ -1,0 +1,37 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - 
+    command: sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+    stdout: true
+    description: Installing oh-my-zsh
+      
+  - 
+    command: git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+    stdin: true
+    stdout: true
+    description: Installing powerlevel9k
+  - 
+    command: chsh -s "/usr/bin/zsh"
+    stdin: true
+    stdout: true
+    stderr: true
+    description: Change shell to zsh
+
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.zshrc:
+      force: true 
+      path: zshrc
+      relink: true
+
+
+
