@@ -59,7 +59,7 @@ filetype plugin indent on
 "=====================================================
 "" General settings
 "=====================================================
-syntax enable                               " syntax highlight
+syntax on                               " syntax highlight
 set t_Co=256                                " set 256 colors
 set number                                  " show line numbers
 

@@ -49,7 +49,7 @@ let g:NERDCompactSexyComs = 1
 "=====================================================
 """ General settings
 "=====================================================
-syntax enable                               " syntax highlight
+syntax on                               " syntax highlight
 set background=dark
 set backspace=2
 set tabstop=4                               " 4 whitespaces for tabs visual presentation
